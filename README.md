@@ -19,4 +19,4 @@ Die Klasse Stack sollte folgende Methoden haben:
     
 Wird auf einen leeren Stack `pop() oder peek()` aufgerufen sollte eine `StackTooSmallException` geworfen werden. 
 
-Leg in der Main Methode einen Stack an und schreib ein paar Beispiel-Verwendungen.  
+Leg in der Main Methode einen Stack an und schreib ein paar Beispiel-Verwendungen. Vergiss nicht auf die Unittests!
