@@ -51,11 +51,11 @@ public class Stack {
             while (i < n) {
                 stackList.get(stackList.size() - 1);
                 numbers.add(stackList.get(stackList.size() - 1));
-                stackList.remove(stackList.size() -1);
+                stackList.remove(stackList.size() - 1);
                 i++;
             }
         }
-        int[]lastNumbers = new int[numbers.size()];
+        int[] lastNumbers = new int[numbers.size()];
         for (int i = 0; i < numbers.size(); i++) {
             lastNumbers[i] = numbers.get(i);
         }
