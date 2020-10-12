@@ -10,16 +10,16 @@ public class TestStack {
     public void testAddingNewInteger() {
         Stack stack = new Stack();
         stack.push(4);
-        assertEquals(4, stack.stackList.get(0));
+        assertEquals(4, stack.getStackList().get(0));
     }
 
     @Test
-    public void testIfStackIsEmpty() {
+    public void testIfStackIsFilled() {
         Stack stack = new Stack();
         stack.push(3);
         stack.push(4);
         stack.push(54);
-        assertEquals(3, stack.stackList.size());
+        assertEquals(3, stack.size());
     }
 
     @Test
@@ -29,7 +29,7 @@ public class TestStack {
         stack.push(6);
         stack.push(7);
         stack.pop();
-        assertEquals(2, stack.stackList.size());
+        assertEquals(2, stack.size());
     }
 
     @Test
@@ -48,7 +48,8 @@ public class TestStack {
         stack.push(5);
         stack.push(6);
         stack.push(7);
-        stack.pop(2);
-        assertEquals(1, stack.stackList.size());
+        int[] ints = {7, 6};
+        assertArrayEquals(ints, stack.pop(2));
+
     }
 }

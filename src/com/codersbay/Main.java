@@ -40,6 +40,5 @@ public class Main {
         Stack stack2 = new Stack();
         stack2.pop();
 
-
     }
 }

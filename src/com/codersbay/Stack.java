@@ -7,8 +7,11 @@ import java.util.List;
 
 public class Stack {
 
-    List<Integer> stackList = new ArrayList<>();
+    private List<Integer> stackList = new ArrayList<>();
 
+    public List<Integer> getStackList() {
+        return stackList;
+    }
 
     public void push(int newElement) {
         stackList.add(newElement);
@@ -22,18 +25,16 @@ public class Stack {
     }
 
     public int pop() {
-        if (stackList.size() == 0) {
+        if (stackList.size() < 0) {
             throw new EmptyStackException();
         } else {
-            int last = stackList.get(stackList.size() - 1);
-            System.out.println(last);
-            stackList.remove(stackList.size() - 1);
+            int last = stackList.remove(stackList.size() - 1);
             return last;
         }
     }
 
     public int peek() {
-        if (stackList.size() == 0) {
+        if (stackList.size() < 0) {
             throw new EmptyStackException();
         } else {
             int last = stackList.get(stackList.size() - 1);
@@ -44,7 +45,7 @@ public class Stack {
 
     public int[] pop(int n) {
         ArrayList<Integer> numbers = new ArrayList<>();
-        if (stackList.size() == 0) {
+        if (stackList.size() < 0) {
             throw new EmptyStackException();
         } else {
             int i = 0;
