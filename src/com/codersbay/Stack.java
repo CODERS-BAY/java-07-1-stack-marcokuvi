@@ -37,7 +37,7 @@ public class Stack {
         if (stackList.isEmpty()) {
             throw new EmptyStackException();
         } else {
-            int last = stackList.size() - 1;
+            int last = stackList.get(stackList.size() - 1);
             System.out.println(last);
             return last;
         }
