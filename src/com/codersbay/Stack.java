@@ -25,7 +25,7 @@ public class Stack {
     }
 
     public int pop() {
-        if (stackList.size() < 0) {
+        if (stackList.isEmpty()) {
             throw new EmptyStackException();
         } else {
             int last = stackList.remove(stackList.size() - 1);
@@ -34,10 +34,10 @@ public class Stack {
     }
 
     public int peek() {
-        if (stackList.size() < 0) {
+        if (stackList.isEmpty()) {
             throw new EmptyStackException();
         } else {
-            int last = stackList.get(stackList.size() - 1);
+            int last = stackList.size() - 1;
             System.out.println(last);
             return last;
         }
@@ -45,7 +45,7 @@ public class Stack {
 
     public int[] pop(int n) {
         ArrayList<Integer> numbers = new ArrayList<>();
-        if (stackList.size() < 0) {
+        if (stackList.isEmpty()) {
             throw new EmptyStackException();
         } else {
             int i = 0;

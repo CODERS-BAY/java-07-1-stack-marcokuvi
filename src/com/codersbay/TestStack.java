@@ -2,6 +2,8 @@ package com.codersbay;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.EmptyStackException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestStack {
@@ -50,6 +52,14 @@ public class TestStack {
         stack.push(7);
         int[] ints = {7, 6};
         assertArrayEquals(ints, stack.pop(2));
+    }
 
+    @Test
+    public void testIfEmptyStackExceptionIsThrownWhenStackListIsEmpty() {
+        assertThrows(EmptyStackException.class, () -> {
+            Stack stack = new Stack();
+            stack.getStackList();
+            stack.pop();
+        });
     }
 }
